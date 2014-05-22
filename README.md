@@ -25,4 +25,4 @@ What I do is create a `~/bin` directory (inside my home folder) and place my com
 
 Contact
 -------
-If you have any questions or comments, feel free to contact me via GitHub.
+If you have any questions or comments, feel free to contact me via GitHub or email.
