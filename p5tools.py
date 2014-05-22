@@ -1,16 +1,16 @@
 #!/usr/bin/env python
 
-import os, sys
+import os
 
 def init_command(directory):
 	""" 
 Initializes a Processing project.
-
 This program will create a directory structure for working with Processing
 inside the Sublime Text editor. This structure was suggested by 
 Joshua Davis (http://joshuadavis.com).
-
 Additionally, it will initialize the root directory with a git repository.
+
+:param directory: where to create the project
     """
 
 	base_directory = os.path.abspath(directory)
@@ -50,7 +50,7 @@ void draw() {
 
 	# Finish!
 
-
+# TODO: Remove scriptine dependency
 if __name__ == '__main__':
     import scriptine
     scriptine.run()
