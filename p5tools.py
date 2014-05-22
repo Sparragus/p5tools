@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 
-import os
+import os, subprocess
 
 def init_command(directory):
 	""" 
@@ -35,20 +35,35 @@ Additionally, it will initialize the root directory with a git repository.
 
 	# Create build.pde inside ./build/ and initialize it with setup() and draw()
 	with open(base_directory + "/build/build.pde", 'w') as f:
-		f.write(
-"""
+		f.write("""
 void setup() {
-	
+
 }
 
 void draw() {
-	
+
 }
-"""
-)
+				""")
 		f.close()
 
-	# Finish!
+	# Initialize a git repository at the base_directory
+	if subprocess.call(["git", "init", base_directory]) == 0:
+		# Git prints a message confirming it succesfully initialized a repository at the dir
+		# it did it.
+		pass
+	else: 
+		print "Couldn't initialize a git repository. Please verify that git is installed."
+
+	print "Finished. Project is ready."
+	# END - init
+
+def install_command(package_name):
+	"""
+	Installs a package in the current directory.
+	"""
+
+	#END - install
+	pass
 
 # TODO: Remove scriptine dependency
 if __name__ == '__main__':
