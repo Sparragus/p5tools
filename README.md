@@ -1,6 +1,6 @@
 p5tools
 =======
-p5tools is a set of commands that performs common tasks when developing [Processing](http://processing.org) apps.
+p5tools is a set of commands that performs common tasks when developing [Processing](http://processing.org) apps. It works best when you write Processing code outside of the Processing IDE. I use a workflow described by [Joshua Davis](http://joshuadavis.com) in his [Generative Art course](http://www.skillshare.com/classes/design/Programming-Graphics-I-Introduction-to-Generative-Art) that uses Sublime Text 2 to edit code and launch sketches/apps.
 
 Commands
 --------
