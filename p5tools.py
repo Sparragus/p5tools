@@ -46,16 +46,21 @@ void draw() {
 				""")
 		f.close()
 
-	# Initialize a git repository at the base_directory
-	if subprocess.call(["git", "init", base_directory]) == 0:
-		# Git prints a message confirming it succesfully initialized a repository at the dir
-		# it did it.
-		pass
-	else: 
-		print "Couldn't initialize a git repository. Please verify that git is installed."
+	# # Initialize a git repository at the base_directory
+	# # An exit code with something else than a 0 means an error.
+	# try:
+	#  	subprocess.check_call(["git", "status"])
+	# 	# Git prints a message confirming it succesfully initialized a repository at the dir
+	# 	# it did it.
+	# 	pass
+	# except CalledProcessError as e:
+	# 	print "Error: ", e.returncode
+	# else:
+	# 	print "Couldn't initialize a git repository. Please verify that git is installed. Verify this directory is not part of another git repository."
 
 	print "Finished. Project is ready."
 	# END - init
+
 
 def install_command(package_name):
 	"""
