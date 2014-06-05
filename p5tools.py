@@ -31,10 +31,11 @@ Additionally, it will initialize the root directory with a git repository.
 		os.mkdir(base_directory)
 
 	# Create build directory
-	os.mkdir(base_directory + "/build")
+	os.mkdir(base_directory + "/step 1")
+	os.mkdir(base_directory + "/step 1/build")
 
 	# Create build.pde inside ./build/ and initialize it with setup() and draw()
-	with open(base_directory + "/build/build.pde", 'w') as f:
+	with open(base_directory + "/step 1/build/build.pde", 'w') as f:
 		f.write("""
 void setup() {
 
